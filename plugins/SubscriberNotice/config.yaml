@@ -1,0 +1,30 @@
+name: Subscriber Notice
+id: SubscriberNotice
+key: SubscriberNotice
+author_link: http://endevver.com
+author_name: Jay Allen, Endevver Consulting
+description: This plugin provides a notification of subscription/unsubscription actions via MT's notify script.
+version: 1.0
+
+callbacks:
+    MT::Notification::post_save: $SubscriberNotice::SubscriberNotice::update_notifcation
+    MT::Notification::post_remove: $SubscriberNotice::SubscriberNotice::update_notifcation
+
+blog_config_template: '<mt:PluginConfigForm id="SubscriberNotice">'
+
+settings:
+    notification_email:
+        Default:
+        Scope: blog
+
+plugin_config:
+  SubscriberNotice:
+    fieldset_one:
+      label: "Email address to notify"
+      notification_email:
+        type: text
+        label: Notification Email
+        hint: "Send a notification to the above email address for all mailing list changes."
+        tag: NotificationEmail
+
+
