@@ -3,7 +3,7 @@ id: SubscriberNotice
 key: SubscriberNotice
 author_link: http://endevver.com
 author_name: Jay Allen, Endevver Consulting
-description: This plugin provides a notification of subscription/unsubscription actions via MT's notify script.
+description: This plugin provides a email notification of subscription/unsubscription actions via MT's NotifyScript or Address Book.
 version: 1.0
 
 callbacks:
